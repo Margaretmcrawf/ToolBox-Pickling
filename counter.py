@@ -37,6 +37,7 @@ def update_counter(file_name, reset=False):
 			s = 1
 	else:
 		s = 1
+
 	#make and pickle the file
 	f = open(file_name, 'w')
 	pickle.dump(s, f)
@@ -48,7 +49,6 @@ def update_counter(file_name, reset=False):
 if __name__ == '__main__':
 	if len(sys.argv) < 2:
 		import doctest
-		#doctest.testmod()
+		doctest.testmod()
 	else:
 		print "new value is " + str(update_counter(sys.argv[1]))
-	print update_counter('nope2.txt')
